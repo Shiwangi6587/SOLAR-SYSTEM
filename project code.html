@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+
+
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="universe" src="https://ichef.bbci.co.uk/news/976/cpsprodpb/C8EF/production/_128093415_89efedf9-936c-4963-a1ed-8ed6e7ab9231.jpg">
+        <img id="sun" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAtEnGC2YPJkRofCjRm57bvAATrsNcWSGlmpXJsL5KEQ&s">
+        <img id="mercury" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmJ2Cd2cloBequuiisZZEMqzpcfcFCAPPGbO9_EDdOkw&s">
+        <img id="venus" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS1xTcCRMZFTXYPsNUd8YS5-zZuV4dfHYb77mCMSSQ0w&s">
+        <img id="earth" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIh0djqWIF-CcneXZJlzZovrr1PD6Sg-tjE6ng2Ar2w&s">
+        <img id="mars" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Xcsvaw10bv6ZQQedNVu8YYZAsZ2ePB-bvPDg5KN0Yw&s">
+        <img id="jupiter" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfz24ETDc-ypoABDAMwVYOxhJNCDLrguJW_K3vOpUzYg&s">
+        <img id="saturn" src="	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kLjnVgkBZ4_nlF1XDq4aZciZ3kZ-KHtwkXH02wJS3Q&s">
+        <img id="uranus" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp6nMG9KIznyNhyJSDn7lplsc28U_nSSUfAmFF3kTcJQ&s">
+        <img id="neptune" src="	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStImAhlPKBZLi5OX9XG0xqWqZTHJs7E8pxyHx1TJqu8w&s">
+      </a-assets>
+      <!-- a-sky -->
+      <a-sky src="#universe"></a-sky> 
+      <!-- sun -->
+      <a-entity  radius="40"id="sun" geometry="primitive: sphere" material="src:#sun"scale="5 5 5 ">
+        <a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite"></a-animation>
+   
+        <!-- Mercury -->
+        <a-entity id="mercury" position="5 0 0" scale="0.38 0.38 0.38" rotation="0 0 0">
+          <a-animation attribute="rotation" to="0 360 0" dur="1000" easing="linear" repeat="indefinite"></a-animation>
+          <a-animation attribute="position" to="0 0 -5" dur="5000" easing="linear" repeat="indefinite"></a-animation>
+          <a-entity geometry="primitive: sphere" material="src:#mercury"></a-entity>
+        </a-entity>
+        
+        <!-- Venus -->
+        <a-entity id="venus" position="7 0 0" scale="0.95 0.95 0.95" rotation="0 0 0">
+          <a-animation attribute="rotation" to="0 360 0" dur="2000" easing="linear" repeat="indefinite"></a-animation>
+          <a-animation attribute="position" to="0 0 -7" dur="7000" easing="linear" repeat="indefinite"></a-animation>
+          <a-entity geometry="primitive: sphere" material="src:#venus"></a-entity>
+        </a-entity>
+        
+        <!-- Earth -->
+        <a-entity id="earth" position="9 0 0" scale="1 1 1" rotation="0 0 0">
+          <a-animation attribute="rotation" to="0 360 0" dur="3000" easing="linear" repeat="indefinite"></a-animation>
+          <a-animation attribute="position" to="0 0 -9" dur="9000" easing="linear" repeat="indefinite"></a-animation>
+          <a-entity geometry="primitive: sphere" material="src:#earth"></a-entity>
+        </a-entity>
+        
+        <!-- Mars -->
+        <a-entity id="mars" position="12 0 0" scale="0.53 0.53 0.53" rotation="0 0 0">
+          <a-animation attribute="rotation" to="0 360 0" dur="4000" easing="linear" repeat="indefinite"></a-animation>
+          <a-animation attribute="position" to="0 0 -12" dur="11000" easing="linear" repeat="indefinite"></a-animation>
+          <a-entity geometry="primitive: sphere" material="src:#mars"></a-entity>
+        </a-entity>
+        
+
+        <!-- Jupiter -->
+        <a-entity id="jupiter" position="14 0 0" scale="5 5 5" rotation="0 0 0">
+          <a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite"></a-animation>
+          <a-animation attribute="position" to="0 0 -17" dur="15000" easing="linear" repeat="indefinite"></a-animation>
+          <a-entity geometry="primitive: sphere" material="src:#jupiter"></a-entity>
+        </a-entity>
+        
+        <!-- Saturn -->
+        <a-entity id="saturn" position="23 0 0" scale="4.3 4.3 4.3" rotation="0 0 0">
+          <a-animation attribute="rotation" to="0 360 0" dur="6000" easing="linear" repeat="indefinite"></a-animation>
+          <a-animation attribute="position" to="0 0 -23" dur="18000" easing="linear" repeat="indefinite"></a-animation>
+          <a-entity geometry="primitive: sphere" material="src:#saturn"></a-entity>
+        </a-entity>
+        
+        <!-- Uranus -->
+        <a-entity id="uranus" position="30 0 0" scale="3.7 3.7 3.7" rotation="0 0 0">
+          <a-animation attribute="rotation" to="0 360 0" dur="7000" easing="linear" repeat="indefinite"></a-animation>
+          <a-animation attribute="position" to="0 0 -30" dur="21000" easing="linear" repeat="indefinite"></a-animation>
+          <a-entity geometry="primitive: sphere" material="src:#uranus"></a-entity>
+        </a-entity>
+        
+        <!-- Neptune -->
+        <a-entity id="neptune" position="38 0 0" scale="3.6 3.6 3.6" rotation="0 0 0">
+          <a-animation attribute="rotation" to="0 360 0" dur="8000" easing="linear" repeat="indefinite"></a-animation>
+          <a-animation attribute="position" to="0 0 -38" dur="25000" easing="linear" repeat="indefinite"></a-animation>
+          <a-entity geometry="primitive: sphere" material="src:#neptune"></a-entity>
+        </a-entity>
+        
+      </a-entity>
+      
+      <!-- Cursor -->
+      <!-- <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity> -->
+    </a-scene>
+  </body> 
+</html>
+
+
